@@ -1,0 +1,39 @@
+@startuml
+hide empty members
+
+'' Сущности
+entity Person {
+    name
+    phone
+}
+
+entity Item {
+    type
+    name
+    quantity
+}
+
+entity Placement {
+    begin_at
+    end_at
+    notes
+}
+
+entity Storage {
+    name
+    type
+    description
+}
+
+'' Связи
+Person "1"-r-"*" Placement : Кто переместил\nинструмент >
+
+Placement "1"-r-"1" Item : Что было\nперемещено <
+
+Item "*"--"1" Storage : Размещенные\nпредметы >
+
+Placement "*"--"1" Storage : Факты\nперемещения >
+
+Storage "0..1"--"*" Storage : Иерархия >
+
+@enduml

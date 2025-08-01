@@ -1,0 +1,20 @@
+@startuml
+
+start
+:Ввод N, B, A;
+:Инициализация массива A[N];
+while (i < N ?)
+  if (A[i] > 0 ?) then (да)
+    :Обновить сумму и счетчик положительных чисел;
+  else (no)
+  endif
+  if (A[i] > B ?) then (да)
+     :Обновить произведение и счетчик чисел > B;
+  else (no)
+  endif
+  :i = i + 1;
+endwhile
+:Вывод результатов;
+stop
+
+@enduml

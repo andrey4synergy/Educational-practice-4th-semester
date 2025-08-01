@@ -1,0 +1,1 @@
+SELECT * FROM Item WHERE name LIKE '%Электродрель Bosch%' OR description LIKE '%Электродрель Bosch%';
